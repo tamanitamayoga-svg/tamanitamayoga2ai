@@ -224,6 +224,14 @@ a:focus-visible, button:focus-visible {
 }
 .badge strong { font-weight: 900; color: #ffe0b0; }
 
+/* ヒーロー情報dl（Codex式：第一印象の情報密度） */
+.hero-facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 0; margin: 0 0 10px; }
+.hero-facts > div { position: relative; padding: 0 20px; }
+.hero-facts > div + div::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: rgba(255,242,224,.34); }
+.hero-facts dt { color: #f2c06f; font-size: .68rem; font-weight: 800; letter-spacing: .04em; }
+.hero-facts dd { margin: 3px 0 0; color: #fff; font-size: 1.12rem; font-weight: 900; line-height: 1.2; text-shadow: 0 2px 14px rgba(38,22,13,.5); }
+.hero-note { color: rgba(255,247,234,.82); font-size: .78rem; font-weight: 600; margin-bottom: 34px; text-shadow: 0 2px 12px rgba(38,22,13,.5); }
+
 .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn-line-hero, .btn-ig-hero {
   display: inline-flex; align-items: center; gap: 8px;
@@ -296,6 +304,9 @@ a:focus-visible, button:focus-visible {
 .studio-content { position: relative; z-index: 1; color: white; padding: 80px 24px; text-shadow: 0 2px 18px rgba(38,22,13,.44); }
 .studio-title { font-family: var(--sans); font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 800; color: white; line-height: 1.35; margin-bottom: 20px; }
 .studio-text { font-size: .96rem; color: rgba(255,255,255,.9); line-height: 2.1; }
+.studio-points { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; margin-top: 26px; }
+.studio-points li { position: relative; padding-left: 16px; color: #fff7ea; font-size: .85rem; font-weight: 700; }
+.studio-points li::before { content: ''; position: absolute; left: 0; top: .65em; width: 6px; height: 6px; border-radius: 50%; background: #f2c06f; }
 
 /* =====================================================
    PRICING
@@ -424,7 +435,8 @@ a:focus-visible, button:focus-visible {
    ===================================================== */
 #gallery { overflow: hidden; background: linear-gradient(180deg, rgba(255,245,232,0), rgba(245,223,200,.32) 44%, rgba(255,245,232,0)); }
 #gallery .sec-label, #gallery .sec-title { padding-left: 24px; }
-.gallery-scroll-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; cursor: grab; margin: 28px 0 20px; padding-bottom: 4px; }
+.gallery-scroll-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; cursor: grab; margin: 28px 0 20px; padding-bottom: 4px; scroll-snap-type: x proximity; }
+figure.gallery-item { scroll-snap-align: center; }
 .gallery-scroll-wrapper::-webkit-scrollbar { display: none; }
 .gallery-scroll-wrapper.grabbing { cursor: grabbing; }
 .gallery-track { display: flex; gap: 12px; padding: 0 24px; width: max-content; }
@@ -458,6 +470,16 @@ figure.gallery-item figcaption { position: relative; z-index: 2; display: inline
 /* =====================================================
    FOOTER
    ===================================================== */
+/* CLOSING CTA */
+#closing {
+  padding: calc(var(--sec-py) - 8px) 0; text-align: center;
+  background: radial-gradient(circle at 50% 30%, rgba(255,214,178,.45), transparent 42%), rgba(255,244,234,.7);
+}
+.closing-title { font-family: var(--sans); font-size: clamp(1.6rem, 4.5vw, 2.3rem); font-weight: 900; color: var(--text-dark); margin-bottom: 12px; }
+.closing-text { color: var(--text-mid); font-size: .95rem; margin-bottom: 30px; }
+.closing-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.closing-btns .btn-line-lg { margin-bottom: 0; }
+
 #footer { background: linear-gradient(180deg, #4a2c18, #3a2113); color: rgba(255,255,255,.62); padding: 54px 24px 38px; text-align: center; }
 .footer-logo { font-family: var(--sans); font-size: 1.1rem; font-weight: 800; color: #fff7ea; letter-spacing: .06em; margin-bottom: 6px; }
 .footer-addr { font-size: .76rem; margin-bottom: 20px; }
