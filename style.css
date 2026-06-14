@@ -240,13 +240,11 @@ a:focus-visible, button:focus-visible {
 /* =====================================================
    SECTION 共通の温度
    ===================================================== */
-#about, #pricing, #calendar, #flow, #instructor, #access, #gallery, #info { padding: var(--sec-py) 0; position: relative; }
+#about, #pricing, #calendar, #flow, #access, #gallery, #info { padding: var(--sec-py) 0; position: relative; }
 #about  { background: radial-gradient(circle at 82% 8%, rgba(255,232,221,.5), transparent 34%); }
 #pricing{ background: radial-gradient(circle at 16% 16%, rgba(255,214,178,.34), transparent 30%), rgba(255,244,234,.55); }
 #calendar { background: radial-gradient(circle at 80% 12%, rgba(232,241,223,.5), transparent 36%); }
 #flow   { background: rgba(255,244,234,.5); }
-#instructor { background: radial-gradient(circle at 18% 12%, rgba(255,224,200,.4), transparent 32%); }
-#instructor .container { max-width: 760px; text-align: center; }
 #info   { background: rgba(255,243,233,.6); }
 
 /* =====================================================
