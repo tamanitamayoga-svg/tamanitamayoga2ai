@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# GitHub Pages公開後、YOUR_USERNAMEを実際のユーザー名に変更してください
+Sitemap: https://tamanitamayoga-svg.github.io/tamaclaude/sitemap.xml
